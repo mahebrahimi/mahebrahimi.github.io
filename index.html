@@ -2,89 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Mah Ebrahimi – CV</title>
+  <title>Mah Ebrahimi – Academic Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Website and CV of Mah Ebrahimi">
+
+  <!-- Optional font (Inter) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
     <h1 class="brand">Mah Ebrahimi</h1>
-    <nav class="nav">
-      <a href="#research">Research</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#cv">CV</a>
-      <a class="btn" href="Mah_Ebrahimi_CV.pdf" target="_blank" rel="noopener">PDF</a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="#home" data-tab="home" class="nav-link">Home</a>
+      <a href="#research" data-tab="research" class="nav-link">Research</a>
+      <a href="#teaching" data-tab="teaching" class="nav-link">Teaching</a>
+      <a href="#cv" data-tab="cv" class="nav-link">CV</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <!-- Hero -->
-  <section class="hero">
-    <p class="lead">
-      Empirical researcher in entrepreneurial finance, innovation, corporate finance, behavioral finance.
-    </p>
-    <p>
-      <a href="mailto:mebrahimi@brandeis.edu">mebrahimi@brandeis.edu</a> · (781) 420-0251
-    </p>
+
+  <!-- HOME -->
+  <section id="home" class="main-section section-home" aria-labelledby="home-title">
+    <h2 id="home-title">Home</h2>
+
+    <div class="block">
+      <h3>Summary Bio</h3>
+      <p><em>Short bio goes here. Two–three sentences about your research focus, methods, affiliations, and current job market status.</em></p>
+    </div>
+
+    <div class="block">
+      <h3>Education</h3>
+      <div class="entry">
+        <h4>Brandeis University, Waltham, MA <span>Ph.D., International Economics &amp; Finance · 2025</span></h4>
+        <p><em>Dissertation:</em> Essays on DARPA’s Role in Financing Innovation</p>
+      </div>
+      <div class="entry">
+        <h4>Brandeis University, Waltham, MA <span>M.S., International Economics &amp; Finance · 2021</span></h4>
+      </div>
+      <div class="entry">
+        <h4>Northeastern University, Boston, MA <span>MBA in Finance · 2016</span></h4>
+      </div>
+      <div class="entry">
+        <h4>Iran University of Science &amp; Technology, Tehran, Iran <span>B.S., Materials Engineering</span></h4>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Research Interests</h3>
+      <p>Entrepreneurial Finance, Innovation, Corporate Finance, Behavioral Finance, Mergers &amp; Acquisitions, IPOs.</p>
+    </div>
   </section>
 
-  <!-- CV (highlights) -->
-  <section id="cv">
-    <h2>Education</h2>
-    <div class="entry">
-      <h3>Brandeis University, Waltham, MA <span>Ph.D., International Economics &amp; Finance · 2025</span></h3>
-      <p><em>Dissertation:</em> Essays on DARPA’s Role in Financing Innovation</p>
+  <!-- RESEARCH -->
+  <section id="research" class="main-section section-research" aria-labelledby="research-title">
+    <h2 id="research-title">Research</h2>
 
-    </div>
-    <div class="entry">
-      <h3>Brandeis University, Waltham, MA <span>M.S., International Economics &amp; Finance · 2021</span></h3>
-    </div>
-    <div class="entry">
-      <h3>Northeastern University, Boston, MA <span>MBA in Finance · 2016</span></h3>
-    </div>
-    <div class="entry">
-      <h3>Iran University of Science &amp; Technology, Tehran, Iran <span>B.S., Materials Engineering</span></h3>
+    <div class="block">
+      <h3>Publications</h3>
+      <ul class="compact">
+        <li>“Trading Opportunities around Morningstar Stock Rating Changes,” <em>The Journal of Investing</em>, Dec 2022 (with Paul J. Bolster &amp; Emery A. Trahan).</li>
+      </ul>
     </div>
 
+    <div class="block">
+      <h3>Working Papers</h3>
+      <ol class="compact">
+        <li>DARPA’s Role in Financing Innovation: Do Program Managers Have Private Information? (with Musacchio &amp; Nandy)</li>
+        <li>DARPA’s Role in Financing Innovation: A Descriptive Analysis of Funding Allocations and Outcomes (with Musacchio &amp; Nandy)</li>
+        <li>A New Dataset on DARPA’s Role in Financing Innovation (with Musacchio &amp; Nandy)</li>
+        <li>Does Having Student Debt Hurt Households’ Ability to Withstand Recessions? (with Krishnan &amp; Wang)</li>
+      </ol>
+    </div>
+  </section>
 
-    <h2 id="teaching">Teaching</h2>
-    <div class="entry">
-      <h3>Adjunct/Lecturer · Brandeis University</h3>
+  <!-- TEACHING -->
+  <section id="teaching" class="main-section section-teaching" aria-labelledby="teaching-title">
+    <h2 id="teaching-title">Teaching</h2>
+
+    <div class="block">
+      <h3>Adjunct / Lecturer – Brandeis University</h3>
       <ul class="compact">
         <li>Financial Management (FIN-203A), MBA — Spring 2023</li>
         <li>Intermediate Macroeconomics (ECON 82b) — Summers 2021 &amp; 2022</li>
       </ul>
     </div>
 
-
-    <h2 id="research">Publications</h2>
-    <ul class="compact">
-      <li>“Trading Opportunities around Morningstar Stock Rating Changes,” <em>The Journal of Investing</em>, Dec 2022 (with Bolster &amp; Trahan).</li>
-    </ul>
-
-    <h2>Working Papers</h2>
-    <ol class="compact">
-      <li>DARPA’s Role in Financing Innovation: Do Program Managers Have Private Information? (with Musacchio &amp; Nandy)</li>
-      <li>DARPA’s Role in Financing Innovation: A Descriptive Analysis of Funding Allocations and Outcomes (with Musacchio &amp; Nandy)</li>
-      <li>A New Dataset on DARPA’s Role in Financing Innovation (with Musacchio &amp; Nandy)</li>
-      <li>Does Having Student Debt Hurt Households’ Ability to Withstand Recessions? (with Krishnan &amp; Wang)</li>
-    </ol>
-
-
-
-
+    <div class="block">
+      <h3>Teaching Assistant – Brandeis University</h3>
+      <ul class="compact two-col">
+        <li>Corporate Finance II, EMBA for Physicians — Spring 2023</li>
+        <li>Venture Capital &amp; Entrepreneurial Finance (FIN-240A) — Fall 2020, 2021, 2022</li>
+        <li>M&amp;A Analysis (FIN-232A) — Spring 2022</li>
+        <li>Financial Management (FIN-203A) — Spring 2022</li>
+        <li>International Portfolio Management (FIN-263A) — Spring 2021</li>
+      </ul>
+    </div>
   </section>
+
+  <!-- CV -->
+  <section id="cv" class="main-section section-cv" aria-labelledby="cv-title">
+    <h2 id="cv-title">CV</h2>
+
+    <div class="block">
+      <p>Download the full CV as a PDF:</p>
+      <p><a class="btn btn-primary" href="Mah_Ebrahimi_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></p>
+    </div>
+
+    <div class="block">
+      <h3>Selected Highlights</h3>
+      <ul class="compact">
+        <li>Industry: Ribbon Communications (Financial Analyst); Harvard Pilgrim Healthcare (Business Analyst).</li>
+        <li>Awards: Rosenberg Institute Summer Research Award (2020–2023); AFA PhD Student Travel Grant (2023); NSF I-Corps Fellowship (2019).</li>
+        <li>Skills: Stata, R, MATLAB, Python, SPSS, SQL; WRDS/CRSP/Compustat/USPTO; Salesforce, Qualtrics, MS Project, Rally, Excel, VBA.</li>
+      </ul>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>© <span id="yr"></span> Mah Ebrahimi • <a href="Mah_Ebrahimi_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></p>
+    <p>© <span id="yr"></span> Mah Ebrahimi</p>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+<script>
+  // SPA-like tabs: show only the selected section
+  (function() {
+    const sections = Array.from(document.querySelectorAll('.main-section'));
+    const links = Array.from(document.querySelectorAll('.nav-link'));
+
+    function showSectionFromHash() {
+      let hash = window.location.hash || '#home';
+      // normalize unknown hashes
+      if (!document.querySelector(hash)) hash = '#home';
+
+      sections.forEach(sec => {
+        sec.style.display = (('#' + sec.id) === hash) ? 'block' : 'none';
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      });
+
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
+    }
+
+    window.addEventListener('hashchange', showSectionFromHash);
+    // initial
+    showSectionFromHash();
+    // update year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  })();
+</script>
 </body>
 </html>
