@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Website and CV of Mah Ebrahimi">
 
-  <!-- Optional font (Inter) -->
+  <!-- Optional font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles.css">
@@ -19,46 +19,75 @@
       <a href="#home" data-tab="home" class="nav-link">Home</a>
       <a href="#research" data-tab="research" class="nav-link">Research</a>
       <a href="#teaching" data-tab="teaching" class="nav-link">Teaching</a>
-      <a href="#cv" data-tab="cv" class="nav-link">CV</a>
+      <!-- CV is now a direct download link -->
+      <a href="Mah_Ebrahimi_CV.pdf" download class="nav-link" title="Download CV (PDF)">CV</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
 
-  <!-- HOME -->
+  <!-- ============== HOME ============== -->
   <section id="home" class="main-section section-home" aria-labelledby="home-title">
     <h2 id="home-title">Home</h2>
 
-    <div class="block">
-      <h3>Summary Bio</h3>
-      <p><em>Short bio goes here. Two–three sentences about your research focus, methods, affiliations, and current job market status.</em></p>
-    </div>
+    <!-- About grid (matches the screenshot layout) -->
+    <div class="about-grid">
+      <!-- Left column -->
+      <aside class="about-left">
+        <div class="avatar">
+          <!-- Replace profile.jpg with your image; keep the same file name -->
+          <img src="profile.jpg" alt="Profile photo placeholder">
+        </div>
 
-    <div class="block">
-      <h3>Education</h3>
-      <div class="entry">
-        <h4>Brandeis University, Waltham, MA <span>Ph.D., International Economics &amp; Finance · 2025</span></h4>
-        <p><em>Dissertation:</em> Essays on DARPA’s Role in Financing Innovation</p>
-      </div>
-      <div class="entry">
-        <h4>Brandeis University, Waltham, MA <span>M.S., International Economics &amp; Finance · 2021</span></h4>
-      </div>
-      <div class="entry">
-        <h4>Northeastern University, Boston, MA <span>MBA in Finance · 2016</span></h4>
-      </div>
-      <div class="entry">
-        <h4>Iran University of Science &amp; Technology, Tehran, Iran <span>B.S., Materials Engineering</span></h4>
-      </div>
-    </div>
+        <div class="left-meta">
+          <div class="title-line">Finance PhD | Boston</div>
+          <div class="email"><a href="mailto:mebrahimi@brandeis.edu">mebrahimi@brandeis.edu</a></div>
 
-    <div class="block">
-      <h3>Research Interests</h3>
-      <p>Entrepreneurial Finance, Innovation, Corporate Finance, Behavioral Finance, Mergers &amp; Acquisitions, IPOs.</p>
+          <div class="badges">
+            <a class="badge" href="#" target="_blank" rel="noopener">SSRN</a>
+            <a class="badge badge-ln" href="#" target="_blank" rel="noopener">in</a>
+            <a class="badge badge-em" href="mailto:mebrahimi@brandeis.edu" aria-label="Email">✉</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right column -->
+      <section class="about-right">
+        <p>
+          I am an Associate at <a href="#" target="_blank" rel="noopener">Cornerstone Research</a>. We provide economic and financial analysis in commercial litigation and regulatory proceedings.
+        </p>
+        <p>
+          I hold a PhD in Finance with a research focus in entrepreneurial finance, financial regulation, and securities issuance. Topics of my papers span venture capital, SPACs, IPOs, and treasury auctions. I am trained in finance/micro/macro theories, financial econometrics, and causal inference. I am proficient in Python, SQL, R, Stata, and SAS. I am a certified <a href="#" target="_blank" rel="noopener">Financial Risk Manager (FRM)</a>.
+        </p>
+        <p>
+          I would love to connect about my work and ways to collaborate.
+        </p>
+
+        <div class="home-cards">
+          <div class="card">
+            <h3>Interests</h3>
+            <ul class="compact">
+              <li>Entrepreneurial finance</li>
+              <li>Financial regulation</li>
+              <li>Securities issuance</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Education</h3>
+            <ul class="compact edu-list">
+              <li>🎓 PhD in International Economics &amp; Finance @ Brandeis, 2018–2025</li>
+              <li>🎓 MBA in Finance @ Northeastern, 2016</li>
+              <li>🎓 BS in Materials Engineering @ IUST, Tehran</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 
-  <!-- RESEARCH -->
+  <!-- ============== RESEARCH ============== -->
   <section id="research" class="main-section section-research" aria-labelledby="research-title">
     <h2 id="research-title">Research</h2>
 
@@ -80,7 +109,7 @@
     </div>
   </section>
 
-  <!-- TEACHING -->
+  <!-- ============== TEACHING ============== -->
   <section id="teaching" class="main-section section-teaching" aria-labelledby="teaching-title">
     <h2 id="teaching-title">Teaching</h2>
 
@@ -104,25 +133,6 @@
     </div>
   </section>
 
-  <!-- CV -->
-  <section id="cv" class="main-section section-cv" aria-labelledby="cv-title">
-    <h2 id="cv-title">CV</h2>
-
-    <div class="block">
-      <p>Download the full CV as a PDF:</p>
-      <p><a class="btn btn-primary" href="Mah_Ebrahimi_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></p>
-    </div>
-
-    <div class="block">
-      <h3>Selected Highlights</h3>
-      <ul class="compact">
-        <li>Industry: Ribbon Communications (Financial Analyst); Harvard Pilgrim Healthcare (Business Analyst).</li>
-        <li>Awards: Rosenberg Institute Summer Research Award (2020–2023); AFA PhD Student Travel Grant (2023); NSF I-Corps Fellowship (2019).</li>
-        <li>Skills: Stata, R, MATLAB, Python, SPSS, SQL; WRDS/CRSP/Compustat/USPTO; Salesforce, Qualtrics, MS Project, Rally, Excel, VBA.</li>
-      </ul>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer">
@@ -132,28 +142,25 @@
 </footer>
 
 <script>
-  // SPA-like tabs: show only the selected section
+  // Show only the selected tab (Home/Research/Teaching). CV is a direct file link.
   (function() {
     const sections = Array.from(document.querySelectorAll('.main-section'));
-    const links = Array.from(document.querySelectorAll('.nav-link'));
+    const links = Array.from(document.querySelectorAll('.nav-link[data-tab]'));
 
     function showSectionFromHash() {
       let hash = window.location.hash || '#home';
-      // normalize unknown hashes
       if (!document.querySelector(hash)) hash = '#home';
 
       sections.forEach(sec => {
         sec.style.display = (('#' + sec.id) === hash) ? 'block' : 'none';
-        window.scrollTo({ top: 0, behavior: 'instant' });
       });
 
       links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }
 
     window.addEventListener('hashchange', showSectionFromHash);
-    // initial
     showSectionFromHash();
-    // update year
     document.getElementById('yr').textContent = new Date().getFullYear();
   })();
 </script>
