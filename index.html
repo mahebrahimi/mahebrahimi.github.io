@@ -226,8 +226,30 @@
 </footer>
 
 <script>
+  // Update footer year
   document.getElementById('yr').textContent = new Date().getFullYear();
-</script>
 
+  // Mobile menu toggle
+  (function(){
+    const btn = document.querySelector('.hamburger');
+    const nav = document.getElementById('primary-nav');
+    if(!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Close menu after a link is clicked
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
 </body>
 </html>
