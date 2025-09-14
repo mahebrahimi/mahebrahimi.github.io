@@ -190,27 +190,8 @@
 </footer>
 
 <script>
-  // Show only the selected tab (Home/Research/Teaching). CV is a direct file link.
-  (function() {
-    const sections = Array.from(document.querySelectorAll('.main-section'));
-    const links = Array.from(document.querySelectorAll('.nav-link[data-tab]'));
-
-    function showSectionFromHash() {
-      let hash = window.location.hash || '#home';
-      if (!document.querySelector(hash)) hash = '#home';
-
-      sections.forEach(sec => {
-        sec.style.display = (('#' + sec.id) === hash) ? 'block' : 'none';
-      });
-
-      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === hash));
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }
-
-    window.addEventListener('hashchange', showSectionFromHash);
-    showSectionFromHash();
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  })();
+  document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
