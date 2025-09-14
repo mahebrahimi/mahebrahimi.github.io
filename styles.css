@@ -92,6 +92,11 @@ html { scroll-behavior: smooth; }
   border-radius:12px; padding:14px;
 }
 
+/* subtle highlight for the section that matches the URL hash */
+.main-section:target h2 {
+  box-shadow: inset 0 -2px 0 var(--primary);
+}
+
 /* ===== Footer ===== */
 .site-footer{
   border-top:1px solid var(--line);
