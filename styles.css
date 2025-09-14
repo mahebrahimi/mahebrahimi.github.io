@@ -9,6 +9,7 @@
 
   /* per-section background colors */
   --home-bg:#f7fafc;
+  --education-bg:#f0f7ff;   /* <--- add this */
   --research-bg:#f9f7ff;
   --teaching-bg:#f6fbf7;
 }
@@ -52,6 +53,7 @@ html { scroll-behavior: smooth; }
 
 /* keep your per-section backgrounds if you want */
 .section-home{background:var(--home-bg)}
+.section-education{background:var(--education-bg)}
 .section-research{background:var(--research-bg)}
 .section-teaching{background:var(--teaching-bg)}
 
