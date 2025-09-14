@@ -12,6 +12,7 @@
   --education-bg:#f0f7ff;   /* <--- add this */
   --research-bg:#f9f7ff;
   --teaching-bg:#f6fbf7;
+  --awards-bg:#fff8f3; /* soft peach, tweak as you like */
 }
 
 *{box-sizing:border-box}
@@ -56,6 +57,7 @@ html { scroll-behavior: smooth; }
 .section-education{background:var(--education-bg)}
 .section-research{background:var(--research-bg)}
 .section-teaching{background:var(--teaching-bg)}
+.section-awards{background:var(--awards-bg)}
 
 
 
