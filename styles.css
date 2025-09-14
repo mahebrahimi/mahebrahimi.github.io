@@ -132,3 +132,24 @@ ul.compact.two-col{columns:2; column-gap:28px}
   h2{margin:6px 0 4px; padding-bottom:2px}
   .block, .card{border:none; padding:0; margin:6px 0}
 }
+
+
+
+/* ===== Social Icons ===== */
+.social-icons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.social-icons a {
+  color: #a8c5e8;      /* light blue */
+  font-size: 28px;     /* icon size */
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;      /* hover color */
+}
+
