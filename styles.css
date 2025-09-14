@@ -146,3 +146,19 @@ html { scroll-behavior: smooth; }
   color: #ffffff;      /* hover color */
 }
 
+/* ===== CV Download Link ===== */
+.cv-download {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.cv-download a {
+  color: #2c6bed; /* same as your primary blue */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.cv-download a:hover {
+  text-decoration: underline;
+}
