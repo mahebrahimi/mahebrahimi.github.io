@@ -40,33 +40,21 @@ body{
 .nav a.active{color:var(--primary); border-bottom-color:var(--primary)}
 
 /* ===== SPA sections ===== */
-.main-section{display:none}
+/* ===== Single-page sections (no hiding) ===== */
 section{padding:18px 0}
+
+/* make anchor jumps smooth */
+html { scroll-behavior: smooth; }
+
+/* offset for sticky header so anchors aren't hidden under it */
+:root { --header-h: 64px; }              /* adjust if your header is taller/shorter */
+.main-section { scroll-margin-top: var(--header-h); }
+
+/* keep your per-section backgrounds if you want */
 .section-home{background:var(--home-bg)}
 .section-research{background:var(--research-bg)}
 .section-teaching{background:var(--teaching-bg)}
 
-h2{
-  margin:8px 0 14px;
-  font-size:13px; letter-spacing:.11em; text-transform:uppercase;
-  color:#222; padding-bottom:6px; border-bottom:1px solid var(--line);
-}
-h3{
-  margin:12px 0 6px; font-size:18px; font-weight:600;
-  display:flex; justify-content:space-between; gap:12px;
-}
-h4{margin:6px 0 4px; font-size:16px; font-weight:600; display:flex; justify-content:space-between; gap:12px}
-h4 span{color:var(--muted); font-weight:400}
-
-.block{
-  background:#fff; border:1px solid var(--line);
-  border-radius:var(--radius); padding:14px; margin:12px 0;
-}
-.entry{margin:12px 0}
-.entry p{margin:6px 0}
-ul.compact, ol.compact{margin:6px 0 6px 20px; padding:0}
-ul.compact li, ol.compact li{margin:4px 0}
-ul.compact.two-col{columns:2; column-gap:28px}
 
 /* ===== Home layout (screenshot-style) ===== */
 .about-grid{
