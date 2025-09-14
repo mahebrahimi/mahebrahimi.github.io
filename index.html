@@ -15,17 +15,23 @@
 <body>
 <header class="site-header">
   <div class="wrap">
+    <!-- Hamburger (top-left) -->
+    <button class="hamburger" aria-label="Menu" aria-controls="primary-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <h1 class="brand">Mah Ebrahimi</h1>
-    <nav class="nav" role="navigation" aria-label="Primary">
+
+    <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary">
       <a href="#home" data-tab="home" class="nav-link">Home</a>
       <a href="#education" data-tab="education" class="nav-link">Education</a>
       <a href="#research" data-tab="research" class="nav-link">Research</a>
       <a href="#teaching" data-tab="teaching" class="nav-link">Teaching</a>
-      <!-- CV is now a direct download link -->
       <a href="Mah_Ebrahimi_CV.pdf" download class="nav-link" title="Download CV (PDF)">CV</a>
     </nav>
   </div>
 </header>
+
 
 <main class="wrap">
 
