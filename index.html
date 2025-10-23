@@ -1,28 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Mah Ebrahimi – Academic Site</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Website and CV of Mah Ebrahimi">
-
-  <!-- Optional font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<meta charset="utf-8">
+<title>Mah Ebrahimi – Academic Site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Website and CV of Mah Ebrahimi">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<script>
-  document.querySelectorAll('.toggle-abstract').forEach(button => {
-    button.addEventListener('click', () => {
-      const abstract = button.nextElementSibling;
-      const isVisible = abstract.style.display === 'block';
-      abstract.style.display = isVisible ? 'none' : 'block';
-      button.textContent = isVisible ? 'Show Abstract' : 'Hide Abstract';
-    });
-  });
-</script>
 <body>
+
 <header class="site-header">
   <div class="wrap">
     <!-- Hamburger (top-left) -->
@@ -287,30 +275,43 @@
 </footer>
 
 <script>
-  // Update footer year
-  document.getElementById('yr').textContent = new Date().getFullYear();
+// Update footer year
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Mobile menu toggle
-  (function(){
-    const btn = document.querySelector('.hamburger');
-    const nav = document.getElementById('primary-nav');
-    if(!btn || !nav) return;
 
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.classList.toggle('is-open', open);
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+// Mobile menu toggle
+(function(){
+const btn = document.querySelector('.hamburger');
+const nav = document.getElementById('primary-nav');
+if(!btn || !nav) return;
 
-    // Close menu after a link is clicked
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        nav.classList.remove('open');
-        btn.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
+
+btn.addEventListener('click', () => {
+const open = nav.classList.toggle('open');
+btn.classList.toggle('is-open', open);
+btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+
+nav.querySelectorAll('a').forEach(a => {
+a.addEventListener('click', () => {
+nav.classList.remove('open');
+btn.classList.remove('is-open');
+btn.setAttribute('aria-expanded', 'false');
+});
+});
+})();
+
+
+// Toggle abstract visibility
+document.querySelectorAll('.toggle-abstract').forEach(button => {
+button.addEventListener('click', () => {
+const abstract = button.nextElementSibling;
+const isVisible = abstract.style.display === 'block';
+abstract.style.display = isVisible ? 'none' : 'block';
+button.textContent = isVisible ? 'Show Abstract' : 'Hide Abstract';
+});
+});
 </script>
 </body>
 </html>
