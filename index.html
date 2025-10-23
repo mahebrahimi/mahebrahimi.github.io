@@ -12,11 +12,20 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
+<script>
+  document.querySelectorAll('.toggle-abstract').forEach(button => {
+    button.addEventListener('click', () => {
+      const abstract = button.nextElementSibling;
+      const isVisible = abstract.style.display === 'block';
+      abstract.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Show Abstract' : 'Hide Abstract';
+    });
+  });
+</script>
 <body>
-
 <header class="site-header">
   <div class="wrap">
+    <!-- Hamburger (top-left) -->
     <button class="hamburger" aria-label="Menu" aria-controls="primary-nav" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -24,65 +33,251 @@
     <h1 class="brand">Mah Ebrahimi</h1>
 
     <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#education" class="nav-link">Education</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#research" class="nav-link">Research</a>
-      <a href="#awards" class="nav-link">Awards</a>
-      <a href="#teaching" class="nav-link">Teaching</a>
+      <a href="#home" data-tab="Home" class="nav-link">Home</a>
+      <a href="#education" data-tab="Education" class="nav-link">Education</a>
+      <a href="#skills" data-tab="Skills" class="nav-link">Skills</a>
+      <a href="#research" data-tab="Research" class="nav-link">Research</a>
+      <a href="#awards" data-tab="Awards" class="nav-link">Awards</a>
+      <a href="#teaching" data-tab="Teaching" class="nav-link">Teaching</a>
       <a href="Mah_Ebrahimi_CV.pdf" download class="nav-link" title="Download CV (PDF)">CV</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-  <!-- Your content goes here -->
 
-  <section id="research" class="main-section section-research">
-    <h2 id="research-title">Research</h2>
+<main class="wrap">
+
+  <!-- ============== HOME ============== -->
+  <section id="home" class="main-section section-home" aria-labelledby="home-title">
+<!--     <h2 id="home-title">Home</h2> -->
+
+    <!-- About grid (matches the screenshot layout) -->
+    <div class="about-grid">
+      <!-- Left column -->
+      <aside class="about-left">
+        <div class="avatar">
+          <!-- Replace profile.jpg with your image; keep the same file name -->
+<!--      <img src="profile.jpg" alt="Profile photo placeholder"> -->
+          <img src="profilev2.jpg" alt="Profile photo placeholder"> 
+<!--      <img src="MahEbrahimi_profile.jpg" alt="Profile photo placeholder"> -->
+        </div>
+
+        <div class="left-meta">
+          <div class="title-line">Finance PhD | Boston</div>
+          <div class="email"><a href="mailto:mebrahimi@brandeis.edu">mebrahimi@brandeis.edu</a></div>
+
+        <div class="social-icons">
+          <!-- Google Scholar -->
+          <a href="https://scholar.google.com/citations?user==ZQ0VrQYAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </a>
+        
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/mahebrahimi/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        
+          <!-- Email -->
+          <a href="mailto:mebrahimi@brandeis.edu" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+          <!-- CV Download link -->
+          <div class="cv-download">
+            <a href="Mah_Ebrahimi_CV.pdf" download>
+              <i class="fa-solid fa-file-pdf"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right column -->
+      <section class="about-right">
+      <p>
+        I am a Ph.D. candidate in Finance at Brandeis University School of Business and Economics expecting to complete by February 2026. My thesis research focuses on financing of innovation and asks the fundamental question: <strong>Can the government finance innovation effectively?</strong>. I explore how <strong>innovation policy</strong> and <strong>public R&amp;D</strong> lead to <strong>innovation and entrepreneurial outcomes</strong>.
+        In my job market paper, I use the Defense Advanced Projects Agency (DARPA) as a novel empirical setting to test whether managerial discretion in financing innovation leads to favoritism, or does it reflect valuable private information that improves innovation outcomes? 
+      </p>
+      
+      <p>
+        My research agenda lies at the intersection of <strong>coprporate and entrepreneurial finance</strong>, <strong>innovation policy</strong>, and the <strong>economics of science and technology</strong> with planned extentions into <strong>fintech</strong> and alternative finance. I study how public R&amp;D agencies, such as the Defense Advanced Research Projects Agency (DARPA), allocate funds and whether DARPA's unique institutional design and program manager (PM) discretion mitigate or exacerbate informational frictions. Building on these insights, I extend my research to fintech platforms where we face parallel questions about information asymmetry. My research also spans <strong>household finance</strong> and <strong>investment decisions</strong>; I have an ongoing project on US household's resilience
+        to recessions when they take on student loans; my published work in <em>The Journal of Investing</em> explores how stock rating changes affect
+        investor behavior. 
+      </p>
+      
+      <p>
+        I am proficient in <strong>Stata</strong> and familiar with <strong>R</strong>, <strong>MATLAB</strong>, and <strong>Python</strong>, with experience working with large databases
+        (e.g., , CRSP, Compustat, USPTO, USAspending, Refinitiv SDC Platinum, etc.). My industry background includes roles in pricing strategy and business
+        analytics, where I built financial models and tools to support strategic decisions. 
+<!--         This combination of academic and industry
+        experience positions me to contribute rigorous, data-driven analysis in both research and consulting environments. -->
+      </p>
+
+
+<!--         <div class="home-cards">
+          <div class="card">
+            <h3>Interests</h3>
+            <ul class="compact">
+              <li>Entrepreneurial finance</li>
+              <li>Innovation</li>
+              <li>Corporate Finance</li>
+              <li>Household Finance</li>
+            </ul>
+          </div> -->
+          
+<!--           <div class="card">
+            <h3>Education</h3>
+            <ul>
+              <li>🎓 Ph.D. in International Economics &amp; Finance @ 
+                  <a href="https://www.brandeis.edu/learning/schools/business-economics.html" target="_blank" rel="noopener">Brandeis</a>, 2025</li>
+              <li>🎓 M.S. in International Economics &amp; Finance @ 
+                  <a href="https://www.brandeis.edu/learning/schools/business-economics.html" target="_blank" rel="noopener">Brandeis</a>, 2021</li>
+              <li>🎓 MBA in Finance @ 
+                  <a href="https://damore-mckim.northeastern.edu/" target="_blank" rel="noopener">Northeastern</a>, 2016</li>
+              <li>🎓 B.Sc. in Materials Science @ 
+                  <a href="https://www.iust.ac.ir/en" target="_blank" rel="noopener">IUST</a>, Tehran</li>
+            </ul>
+          </div> -->
+        </div>
+      </section>
+    </div>
+  </section>
+  <!-- ============== EDUCATION ============== -->
+  <section id="education" class="main-section section-education" aria-labelledby="education-title">
+    <h2 id="education-title">Education</h2>
+  
+    <div class="block">
+      <ul>
+        <li>🎓 Ph.D. in International Economics &amp; Finance @ 
+            <a href="https://www.brandeis.edu/learning/schools/business-economics.html" target="_blank" rel="noopener">Brandeis University School of Business and Economics</a>, 2025</li>
+        <li>🎓 M.S. in International Economics &amp; Finance @ 
+            <a href="https://www.brandeis.edu/learning/schools/business-economics.html" target="_blank" rel="noopener">Brandeis University School of Business and Economics</a>, 2021</li>
+        <li>🎓 MBA in Finance @ 
+            <a href="https://damore-mckim.northeastern.edu/" target="_blank" rel="noopener">Northeastern University, D’Amore-McKim School of Business</a>, 2016</li>
+        <li>🎓 B.Sc. in Materials Science @ 
+            <a href="https://www.iust.ac.ir/en" target="_blank" rel="noopener">Iran University of Science and Technology</a></li>
+      </ul>
+    </div>
+  </section>
+
+<!-- ============== SKILLS ============== -->
+  <section id="skills" class="main-section section-skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">Skills</h2>
+    <div class="block">
+      <ul>
+        <li><strong>Programming and Statistical Tools:</strong> Stata, R, MATLAB, Python, SPSS, SQL, LaTeX</li>
+        <li><strong>Databases:</strong> CRSP, Compustat, Refinitiv SDC Platinum (M&A, IPO, VC/PE deals), USPTO patents, ip.com (patent analytics), USAspending, Survey of Consumer Finances (SCF), Morningstar Direct, Penn World Table (PWT)</li>
+        <li><strong>Research Platforms:</strong> Bloomberg Terminal, WRDS</li>
+      </ul>
+    </div>
+  </section>
+
+
+  
+  <!-- ============== RESEARCH ============== -->
+  <section id="research" class="main-section section-research" aria-labelledby="research-title">
+     <h2 id="research-title">Research</h2> 
+
+    <div class="block">
+      <h3>Publications</h3>
+      <ul class="compact">
+        <li>
+          <strong>“Trading Opportunities around Morningstar Stock Rating Changes”</strong>, 
+          <em>The Journal of Investing</em>, Dec 2022 <br>
+          (with Paul J. Bolster &amp; Emery A. Trahan) 
+          <a href="https://www.pm-research.com/content/iijinvest/32/1/89" target="_blank" rel="noopener">(link)</a>
+        </li>
+      </ul>
+    </div>
+
 
     <div class="block">
       <h3>Working Papers</h3>
       <ol class="compact">
-        <li>
-          <strong>DARPA’s Role in Financing Innovation: Do Program Managers Have Private Information?</strong><br>
-          (Job Market Paper, with Aldo Musacchio & Debarshi Nandy)<br>
-          <button class="toggle-abstract">Show Abstract</button>
-          <div class="abstract" style="display: none;">
-            This paper provides an analysis of the Defense Advanced Research Projects Agency's (DARPA) innovation funding model, emphasizing the pivotal role of Program Managers (PMs) in shaping outcomes... (full abstract here)
-          </div>
-          <a href="MahEbrahimi_JMP.pdf" download>Download PDF</a>
-        </li>
-
-        <li>
-          <strong>DARPA’s Role in Financing Innovation: A Descriptive Analysis of Funding Allocations and Outcomes</strong><br>
-          (with Aldo Musacchio & Debarshi Nandy)<br>
-          <button class="toggle-abstract">Show Abstract</button>
-          <div class="abstract" style="display: none;">
-            This paper provides the first systematic descriptive analysis... (full abstract here)
-          </div>
-        </li>
-
-        <li>
-          <strong>A New Dataset on DARPA’s Role in Financing Innovation</strong><br>
-          (with Aldo Musacchio & Debarshi Nandy)<br>
-          <button class="toggle-abstract">Show Abstract</button>
-          <div class="abstract" style="display: none;">
-            We introduce a new panel dataset of the Defense Advanced Research Projects Agency (DARPA)... (full abstract here)
-          </div>
-        </li>
-
+          <li>
+            <strong>DARPA’s Role in Financing Innovation: Do Program Managers Have Private Information?</strong><br>
+            (Job Market Paper, with Aldo Musacchio & Debarshi Nandy)<br>
+        
+            <a href="MahEbrahimi_JMP.pdf" download>Download PDF</a>
+          </li>
+          <li>
+            <strong>DARPA’s Role in Financing Innovation: A Descriptive Analysis of Funding Allocations and Outcomes</strong><br>
+            (with Aldo Musacchio &amp; Debarshi Nandy)<br>
+            <button class="toggle-abstract">Show Abstract</button>
+            <div class="abstract" style="display: none;"> 
+             This paper provides the first systematic descriptive analysis of the Defense Advanced Research Projects Agency’s (DARPA) funding allocations and innovation outcomes using newly assembled project–grantee–year data covering 2012–2019. We link FOIA-obtained DARPA disbursements to grantee characteristics, program classifications, program manager (PM) biographies, USPTO patent outcomes, and Department of Defense follow-on contracts. Our analysis addresses four central questions raised in the literature on public R&amp;D: (i) whether different program types (basic, applied, advanced technology development) receive systematically different levels of funding; (ii) whether DARPA’s portfolio is concentrated among a small set of large grantees; (iii) whether lobbying intensity and political cycles shape allocations; and (iv) whether DARPA directs resources toward industries experiencing high growth, and with what outcomes. We further examine heterogeneity by grantee type (private, public, university) and PM background (industry, academia, military). The results highlight DARPA’s dual strategy of seeding entry by private firms while maintaining strong ties with established incumbents, and reveal systematic differences in continuation, concentration, and innovation outputs across grantee and allocator types. Beyond describing DARPA’s funding landscape, our findings establish a foundation for causal analysis of the DARPA's funding mechanisms.
+            </div>
+            <br>
+          </li>
+          <li>
+            <strong>A New Dataset on DARPA’s Role in Financing Innovation</strong><br>
+            (with Aldo Musacchio &amp; Debarshi Nandy)<br>
+            <button class="toggle-abstract">Show Abstract</button>
+            <div class="abstract" style="display: none;"> 
+             We introduce a new panel dataset of the Defense Advanced Research Projects Agency (DARPA), covering 2012–2019. Built from FOIA-obtained disbursement records, USAspending data, USPTO patent filings, and hand-collected PM biographies, the dataset links DARPA projects to innovation and adoption outcomes at project–grantee–program manager (PM)–year granularity. Our contributions are threefold. First, we connect DARPA awards to project-relevant patents and citations using a NAICS–CPC crosswalk, enabling field-specific measures of technological impact. Second, we compile biographical profiles of DARPA PMs, allowing analysis of how allocator discretion and prior experience shape funding outcomes. Third, we match DARPA-funded projects to follow-on Department of Defense contracts, tracing diffusion from R&amp;D to procurement. By providing DARPA-specific microdata that complement broad resources such as NIH grant–publication datasets and the Government Patent Register. This dataset offers a foundation for studying informational asymmetries, favoritism, and efficiency in public R&amp;D allocation.
+            </div>
+            <br>
+          </li>
         <li>
           <strong>Does Having Student Debt Hurt Households’ Ability to Withstand Recessions?</strong><br>
-          (with Karthik Krishnan & Pinshu Wang)<br>
-          <button class="toggle-abstract">Show Abstract</button>
-          <div class="abstract" style="display: none;">
-            We assess the relationship between the level of educational debt and households' resilience during recessions... (full abstract here)
-          </div>
+          (with Karthik Krishnan &amp; Pinshu Wang)<br>
+            <button class="toggle-abstract">Show Abstract</button>
+            <div class="abstract" style="display: none;"> 
+              We assess the relationship between the level of educational debt and ability of households to withstand the negative impact of recessions that happen around the time they graduate from college. Households with higher student debt where household head experiences a recession shortly after graduation from college have lower family income and spend a shorter amount of time being employed in full time jobs. These effects are the strongest during the early part of one’s career, but weaken (in aggregate) after that. Our study indicates that policymakers and academics trying to understand the impact of recessions on economic outcomes may have to consider the impact of student loans. 
+            </div>
+            <br>
         </li>
       </ol>
     </div>
   </section>
+
+
+  <!-- ============== AWARDS ============== -->
+  <section id="awards" class="main-section section-awards" aria-labelledby="awards-title">
+    <h2 id="awards-title">Awards</h2>
+    <div class="block">
+      <ul class="compact">
+        <li>Rosenberg Institute of Global Finance Summer Research Award (2020–2023)</li>
+        <li>AFA PhD Student Travel Grant, American Finance Association (Jan 2023)</li>
+        <li>NSF I-Corps Fellowship Program (Summer 2019)</li>
+        <li>MBA Achiever’s Scholarship, Northeastern University (2013)</li>
+      </ul>
+    </div>
+  </section>
+
+
+  
+  <!-- ============== TEACHING ============== -->
+  <section id="teaching" class="main-section section-teaching" aria-labelledby="teaching-title">
+     <h2 id="teaching-title">Teaching</h2> 
+
+    <div class="block">
+      <h3>Adjunct Lecturer</h3>
+      <ul class="compact">
+        <li>Financial Management (FIN-203A), MBA Course
+          <a href="Financial_Management_FIN_203.pdf" download>(syllabus)</a>
+        </li>
+        <li>Intermediate Macroeconomics (ECON 82b)
+        <a href="Intermediate_Macro_Summer_2022.pdf" download>(syllabus)</a>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="block">
+      <h3>Teaching Assistant</h3>
+      <ul class="compact two-col">
+        <li>Corporate Finance II (223HS-441A-1), EMBA for Physicians</li>
+        <li>Venture Capital &amp; Entrepreneurial Finance (FIN-240A)</li>
+        <li>M&amp;A Analysis (FIN-232A)</li>
+        <li>Financial Management (FIN-203A)</li>
+        <li>International Portfolio Management (FIN-263A)</li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
 </main>
 
 <footer class="site-footer">
@@ -107,6 +302,7 @@
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
+    // Close menu after a link is clicked
     nav.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         nav.classList.remove('open');
@@ -115,17 +311,6 @@
       });
     });
   })();
-
-  // Toggle abstract visibility
-  document.querySelectorAll('.toggle-abstract').forEach(button => {
-    button.addEventListener('click', () => {
-      const abstract = button.nextElementSibling;
-      const isVisible = abstract.style.display === 'block';
-      abstract.style.display = isVisible ? 'none' : 'block';
-      button.textContent = isVisible ? 'Show Abstract' : 'Hide Abstract';
-    });
-  });
 </script>
-
 </body>
 </html>
