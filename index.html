@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -36,8 +36,6 @@
 </header>
 
 <main class="wrap">
-  <!-- Your content goes here -->
-
   <section id="research" class="main-section section-research">
     <h2 id="research-title">Research</h2>
 
@@ -92,37 +90,37 @@
 </footer>
 
 <script>
-  // Update footer year
-  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.addEventListener("DOMContentLoaded", () => {
+    // Update footer year
+    document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Mobile menu toggle
-  (function(){
+    // Mobile menu toggle
     const btn = document.querySelector('.hamburger');
     const nav = document.getElementById('primary-nav');
-    if(!btn || !nav) return;
-
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.classList.toggle('is-open', open);
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        nav.classList.remove('open');
-        btn.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        btn.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
-    });
-  })();
 
-  // Toggle abstract visibility
-  document.querySelectorAll('.toggle-abstract').forEach(button => {
-    button.addEventListener('click', () => {
-      const abstract = button.nextElementSibling;
-      const isVisible = abstract.style.display === 'block';
-      abstract.style.display = isVisible ? 'none' : 'block';
-      button.textContent = isVisible ? 'Show Abstract' : 'Hide Abstract';
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          nav.classList.remove('open');
+          btn.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Toggle abstract visibility
+    document.querySelectorAll('.toggle-abstract').forEach(button => {
+      button.addEventListener('click', () => {
+        const abstract = button.nextElementSibling;
+        const isVisible = abstract.style.display === 'block';
+        abstract.style.display = isVisible ? 'none' : 'block';
+        button.textContent = isVisible ? 'Show Abstract' : 'Hide Abstract';
+      });
     });
   });
 </script>
