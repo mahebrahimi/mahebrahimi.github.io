@@ -217,7 +217,26 @@ html { scroll-behavior: smooth; }
 
 
 .abstract {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-left: 4px solid #555;
   font-size: 0.95em;
-  margin-top: 4px;
-  color: #444;
+  color: #333;
 }
+
+button.toggle-abstract {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  background-color: transparent;
+  border: none;
+  color: #0077cc;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+}
+
+button.toggle-abstract:hover {
+  text-decoration: underline;
+}
+
