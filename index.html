@@ -5,14 +5,91 @@
   <title>Mah Ebrahimi – Academic Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Website and CV of Mah Ebrahimi">
+
+  <!-- Optional font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body>
-<!-- FULL PAGE CONTENT GOES HERE -->
 
-<!-- (Your full content is already correctly inserted) -->
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <button class="hamburger" aria-label="Menu" aria-controls="primary-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <h1 class="brand">Mah Ebrahimi</h1>
+
+    <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#awards" class="nav-link">Awards</a>
+      <a href="#teaching" class="nav-link">Teaching</a>
+      <a href="Mah_Ebrahimi_CV.pdf" download class="nav-link" title="Download CV (PDF)">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Your content goes here -->
+
+  <section id="research" class="main-section section-research">
+    <h2 id="research-title">Research</h2>
+
+    <div class="block">
+      <h3>Working Papers</h3>
+      <ol class="compact">
+        <li>
+          <strong>DARPA’s Role in Financing Innovation: Do Program Managers Have Private Information?</strong><br>
+          (Job Market Paper, with Aldo Musacchio & Debarshi Nandy)<br>
+          <button class="toggle-abstract">Show Abstract</button>
+          <div class="abstract" style="display: none;">
+            This paper provides an analysis of the Defense Advanced Research Projects Agency's (DARPA) innovation funding model, emphasizing the pivotal role of Program Managers (PMs) in shaping outcomes... (full abstract here)
+          </div>
+          <a href="MahEbrahimi_JMP.pdf" download>Download PDF</a>
+        </li>
+
+        <li>
+          <strong>DARPA’s Role in Financing Innovation: A Descriptive Analysis of Funding Allocations and Outcomes</strong><br>
+          (with Aldo Musacchio & Debarshi Nandy)<br>
+          <button class="toggle-abstract">Show Abstract</button>
+          <div class="abstract" style="display: none;">
+            This paper provides the first systematic descriptive analysis... (full abstract here)
+          </div>
+        </li>
+
+        <li>
+          <strong>A New Dataset on DARPA’s Role in Financing Innovation</strong><br>
+          (with Aldo Musacchio & Debarshi Nandy)<br>
+          <button class="toggle-abstract">Show Abstract</button>
+          <div class="abstract" style="display: none;">
+            We introduce a new panel dataset of the Defense Advanced Research Projects Agency (DARPA)... (full abstract here)
+          </div>
+        </li>
+
+        <li>
+          <strong>Does Having Student Debt Hurt Households’ Ability to Withstand Recessions?</strong><br>
+          (with Karthik Krishnan & Pinshu Wang)<br>
+          <button class="toggle-abstract">Show Abstract</button>
+          <div class="abstract" style="display: none;">
+            We assess the relationship between the level of educational debt and households' resilience during recessions... (full abstract here)
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="yr"></span> Mah Ebrahimi</p>
+  </div>
+</footer>
 
 <script>
   // Update footer year
