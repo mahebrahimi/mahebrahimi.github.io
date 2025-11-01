@@ -33,6 +33,13 @@ body{
 }
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between}
 .brand{margin:12px 0;font-size:22px;font-weight:700;letter-spacing:.2px}
+.pronunciation {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -5px;
+  font-style: italic;
+}
+
 .nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
 .nav a{
   color:var(--muted); text-decoration:none; padding:10px 0; font-size:15px;
